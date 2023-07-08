@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+</head>
+
+<body>
+    <!--* Resolution switching: different size -->
+    <!--     <img
+    srcset="
+    /assets/images/firefox-logo.png 286w,
+        /assets/images/dinosaur.jpg     400w
+      "
+      sizes="(max-width: 500px) 286px, 400px"
+      src="/assets/images/firefox-developer-logo.png"
+      alt="Dinosaur"
+    /> -->
+
+    <!-- <img
+      srcset="
+        /assets/images/firefox-logo.png 286w,
+        /assets/images/dinosaur.jpg     400w
+      "
+      sizes="(max-width: 500px) 50vw, 400px"
+      src="/assets/images/firefox-developer-logo.png"
+      alt="Dinosaur"
+      /> -->
+
+    <img srcset="
+        /assets/images/elva-480w-close-portrait.jpg 480w,
+        /assets/images/elva-800w.jpg                800w
+      " sizes="(max-width: 980px) 50vw, 50vw" src="/assets/images/elva-480w-close-portrait.jpg"
+        alt="Elva's father holding her in hand" />
+
+    <!--* Resolution switching: same size, diffrent resolution-->
+    <br />
+    <img style="width: 320px" srcset="
+        /assets/images/elva-fairy-320w.jpg,
+        /assets/images/elva-fairy-480w.jpg 1.5x,
+        /assets/images/elva-fairy-800w.jpg 2x
+      " src="/assets/images/elva-fairy-480w.jpg" alt="Elva dressed as a fairy" />
+
+    <!-- Different images of different sizes -->
+    <br />
+    <picture>
+        <source srcset="/assets/images/elva-480w-close-portrait.jpg" media="(max-width: 799px)" />
+        <source srcset="/assets/images/elva-800w.jpg" media="(min-width: 800px)" />
+        <img src="/assets/images/elva-800w.jpg" alt="Chris standing with his daughter elva" />
+    </picture>
+</body>
+
+</html>
